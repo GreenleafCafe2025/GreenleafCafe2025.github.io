@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Greenleaf Café</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Greenleaf Café</div>
+            <ul class="menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#reservas" class="nav-link">Reservas</a></li>
+                <li><a href="#tienda" class="nav-link">Tienda</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="seccion">
+        <h1 class="titulo-seccion">Bienvenidos a Greenleaf Café</h1>
+        <p class="descripcion">Café orgánico, comidas frescas y saludables, opciones veganas y sin gluten.</p>
+    </section>
+
+    <section id="menu" class="seccion">
+        <h2 class="titulo-seccion">Menú de Temporada</h2>
+
+        <div class="menu-container">
+            <button class="boton-menu" data-menu="cafe">Café Orgánico</button>
+            <ul id="menu-cafe" class="submenu">
+                <li>Café Solo - 2.00€</li>
+                <li>Café con Leche - 2.50€</li>
+                <li>Café Descafeinado - 2.20€</li>
+                <li>Café con Nata - 3.00€</li>
+                <li>Café con Caramelo - 3.20€</li>
+                <li>Cappuccino - 3.50€</li>
+                <li>Latte Macchiato - 3.80€</li>
+                <li>Mochaccino - 4.00€</li>
+                <li>Espresso Doble - 2.80€</li>
+                <li>Americano - 2.30€</li>
+            </ul>
+
+            <button class="boton-menu" data-menu="ensalada">Ensalada Vegana</button>
+            <ul id="menu-ensalada" class="submenu">
+                <li>Ensalada de Quinoa con Aguacate y Mango - 8.50€</li>
+                <li>Ensalada Mediterránea Vegana con Tofu y Aceitunas - 7.90€</li>
+                <li>Ensalada de Lentejas con Vegetales Frescos y Vinagreta de Hierbas - 7.50€</li>
+                <li>Ensalada César Vegana con Crutones de Pan Integral y Aderezo Casero - 8.20€</li>
+                <li>Ensalada de Remolacha Asada con Nueces y Queso Vegano - 8.80€</li>
+            </ul>
+
+            <button class="boton-menu" data-menu="sopa">Sopa de Calabaza</button>
+            <ul id="menu-sopa" class="submenu">
+                <li>Sopa de Calabaza Clásica con Crutones - 6.00€</li>
+                <li>Sopa de Calabaza y Jengibre con un Toque de Naranja - 6.50€</li>
+                <li>Sopa de Calabaza Vegana con Leche de Coco y Curry - 6.80€</li>
+                <li>Sopa Crema de Calabaza con Semillas de Calabaza Tostadas - 6.20€</li>
+            </ul>
+
+            <button class="boton-menu" data-menu="postre">Postres sin Gluten</button>
+            <ul id="menu-postre" class="submenu">
+                <li>Tarta de Manzana Sin Gluten con Canela - 5.50€</li>
+                <li>Brownie de Chocolate Sin Gluten con Nueces - 5.80€</li>
+                <li>Cupcakes de Zanahoria Sin Gluten con Frosting de Queso Vegano - 5.20€</li>
+                <li>Mousse de Chocolate Negro Sin Gluten - 6.00€</li>
+                <li>Cheesecake Vegano Sin Gluten con Frutos Rojos - 6.50€</li>
+                <li>Panna Cotta de Coco Sin Gluten con Mango - 5.90€</li>
+                <li>Galletas de Almendra Sin Gluten - 4.50€ (por porción)</li>
+                <li>Bizcocho de Limón Sin Gluten con Glaseado - 5.00€</li>
+                <li>Trufas de Chocolate Veganas Sin Gluten - 4.80€ (por porción)</li>
+                <li>Helado Artesanal Sin Gluten (varios sabores) - 4.00€ (por bola)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="reservas" class="seccion">
+        <h2 class="titulo-seccion">Reserva tu Mesa</h2>
+        <form id="formulario-reservas">
+            <div class="campo-grupo">
+                <label for="nombre-reserva">Nombre:</label>
+                <input type="text" id="nombre-reserva" class="campo" placeholder="Tu nombre" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="email-reserva">Correo electrónico:</label>
+                <input type="email" id="email-reserva" class="campo" placeholder="Tu correo electrónico" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="fecha-reserva">Fecha:</label>
+                <input type="date" id="fecha-reserva" class="campo" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="hora-reserva">Hora:</label>
+                <input type="time" id="hora-reserva" class="campo" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="personas-reserva">Número de personas:</label>
+                <select id="personas-reserva" class="campo">
+                    <option value="1">1 persona</option>
+                    <option value="2">2 personas</option>
+                    <option value="3">3 personas</option>
+                    <option value="4">4 personas</option>
+                    <option value="5">5 personas</option>
+                    <option value="6">6 o más personas</option>
+                </select>
+            </div>
+            <button type="submit" class="boton">Reservar Mesa</button>
+            <div id="mensaje-reserva" class="mensaje oculto">¡Tu reserva ha sido realizada con éxito!</div>
+        </form>
+    </section>
+
+    <section id="tienda" class="seccion">
+        <h2 class="titulo-seccion">Nuestra Tienda Online</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <h3>Café Solo</h3>
+                <p class="precio">2.00€</p>
+                <button class="boton boton-comprar" data-nombre="Café Solo" data-precio="2.00">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <h3>Café con Leche</h3>
+                <p class="precio">2.50€</p>
+                <button class="boton boton-comprar" data-nombre="Café con Leche" data-precio="2.50">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <h3>Ensalada de Quinoa</h3>
+                <p class="precio">8.50€</p>
+                <button class="boton boton-comprar" data-nombre="Ensalada de Quinoa" data-precio="8.50">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <h3>Sopa de Calabaza Clásica</h3>
+                <p class="precio">6.00€</p>
+                <button class="boton boton-comprar" data-nombre="Sopa de Calabaza Clásica" data-precio="6.00">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <h3>Tarta de Manzana Sin Gluten</h3>
+                <p class="precio">5.50€</p>
+                <button class="boton boton-comprar" data-nombre="Tarta de Manzana Sin Gluten" data-precio="5.50">Añadir al carrito</button>
+            </div>
+            </div>
+        <div id="carrito" class="carrito">
+            <h3>Carrito de Compras</h3>
+            <ul id="lista-carrito">
+                </ul>
+            <p id="total-carrito">Total: 0.00€</p>
+            <button class="boton">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <section id="blog" class="seccion">
+        <h2 class="titulo-seccion">Del Campo a Tu Mesa</h2>
+        <div class="blog-grid">
+            <article class="post">
+                <h3 class="titulo-post">The Art of Brewing Organic Coffee</h3>
+                <p class="resumen">Explore the meticulous process behind our signature organic coffee blends...</p>
+                <a href="https://unitedbeans.ca/blogs/the-coffee-journal/the-art-of-brewing-perfect-coffee?srsltid=AfmBOopRNGfCX3c7PMXGqOrvwdbBjMh06zw5s3G-RTuDfDKs2nQnrW33" class="boton" target="_blank">Read More</a>
+            </article>
+            <article class="post">
+                <h3 class="titulo-post">Healthy Vegan Recipes to Try at Home</h3>
+                <p class="resumen">Discover delicious and nutritious vegan recipes featuring our locally sourced ingredients...</p>
+                <a href="https://www.loveandlemons.com/vegan-recipes/" class="boton" target="_blank">Read More</a>
+            </article>
+            <article class="post">
+                <h3 class="titulo-post">Meet Our Local Farmers: Supporting Sustainable Agriculture</h3>
+                <p class="resumen">Learn about the dedicated farmers who supply us with the freshest organic produce...</p>
+                <a href="https://www.sustainableagriculture.eco/post/supporting-local-farmers-the-importance-of-buying-locally-grown-produce" class="boton" target="_blank">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contacto" class="seccion">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <p>Dirección: Calle Principal 123, Centro, Getafe</p>
+        <p>Teléfono: +34 91 234 56 78</p>
+        <p>Email: info@greenleafcafe.com</p>
+        <form>
+            <div class="campo-grupo">
+                <label for="nombre-contacto">Tu nombre:</label>
+                <input type="text" id="nombre-contacto" class="campo" placeholder="Tu nombre" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="email-contacto">Tu correo electrónico:</label>
+                <input type="email" id="email-contacto" class="campo" placeholder="Tu correo electrónico" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="mensaje-contacto">Tu mensaje:</label>
+                <textarea id="mensaje-contacto" class="campo" placeholder="Tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="boton">Enviar</button>
+        </form>
+        <div class="redes-sociales">
+            <a href="#" class="red-social"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="#" class="red-social"><i class="fab fa-facebook"></i> Facebook</a> |
+            <a href="#" class="red-social"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
